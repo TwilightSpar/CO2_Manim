@@ -1,7 +1,7 @@
-1， 展示M1，
+1， 展示M1， ####### done zyq
 展示公式（1）-（5）；删掉公式4，5， (1)-(3)组合，并移到屏幕左上角，之后缩小。
 
-2， In order to find an expression of $V_{tis}$； 
+2， In order to find an expression of $V_{tis}$；  ###### done zyq
 展示（9），展示（7），TransformMatchingTex变换到7-L。7-L上移走
 展示公式（2），TransformMatchingTex变换，ReplacementTransform变换，TransformMatchingTex变换，ReplacementTransform变换，得到$\bar P_m(s) = \frac{M_{m}/(ks) + Q_{m}\bar P_a^*}{sV_{m}+Q_{m}}$
 展示公式（3），ReplacementTransform变换，得到$\bar P_{ot}(s) = \frac{M_{ot}/(ks) + Q_{ot}\bar P_a^*}{sV_{ot}+Q_{ot}}$
@@ -11,12 +11,14 @@
 展示（10），展示假设，TransformMatchingTex变换，ReplacementTransform变换得到（11），ReplacementTransform变换得到（12）
 
 4，展示M2
-展示（13，14）+两个\tau
+展示（7，8，12）变换到（14），上面再加上13，下面加上两个\tau的定义
 
 5，reduce to one compartment
-展示（13，14），带入假设，13，14 Transform变换得到（15）
+展示（13，14），上面展示假设，13，14 Transform变换得到（15）
 展示（15） 的Left hand side， 带入theta，展示变换后的LHS， 变换，变换
-带入假设>>1,<<，展示tau_e, tau_A, 带入tau,变换得到（16）
+带入假设>>1,<<，展示tau_e, tau_A, 变换得到（16）。最后只显示16
 
-6，M3
-展示（17）
+6，M3 + stability
+展示（17），展示（18）， 18带入 17 得19（下面出现一行F=...之后消失），展示19-1.19+19-1 合并为22（下面出现一行A=...，B=...之后消失）。 
+
+7，展示（22），上面缩小一点展示S1,S2,S3。（22）变换为（23）

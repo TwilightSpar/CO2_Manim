@@ -154,7 +154,7 @@ Combine (13)(14):
 
 $\begin{equation} \tau_{tis}  \frac{\dd[2]P_{tis}}{\dd t^2} +(1+\frac{\tau_{tis}}{\tau_A} + \frac{\tau_{tis}}{\tau_e})\frac{\dd P_{tis}}{\dd t} = \frac{P_I-P_{tis}}{\tau_A} + \frac{M_{tis}Q}{k}(\frac{1}{\tau_A}+\frac{1}{\tau_e}) \tag{15} \end{equation}$ 
 
-Focus on LHS, and conduct dimensionless $\theta=\frac{t}{\tau_{tis}}$: 
+Focus on LHS, and conduct dimensionless transform $\theta=\frac{t}{\tau_{tis}}$: 
 $$
 LHS= [\frac{\dd[2]P_{tis}}{\dd \theta^2} +(1+\frac{\tau_{tis}}{\tau_A} + \frac{\tau_{tis}}{\tau_e})\frac{\dd P_{tis}}{\dd \theta}]\frac{1}{\tau_{tis}} \\
 \approx (\frac{\tau_{tis}}{\tau_A} + \frac{\tau_{tis}}{\tau_e})\frac{\dd P_{tis}}{\dd \theta}\frac{1}{\tau_{tis}} \\
@@ -176,8 +176,6 @@ $\begin{equation} \frac{\dd P_{s}}{\dd t} = \frac{\dot V_A V_S(P_I-P_{s})}{\lamb
 
 
 
-
-
 The below graph is the numerical simulation of the three models:
 
 The y axis of M1, M2, M3 correspond to $P_v,P_v,P_s$ in each model.
@@ -186,21 +184,73 @@ The y axis of M1, M2, M3 correspond to $P_v,P_v,P_s$ in each model.
 
 #### Stability criterion:
 
-Assumption####: The alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure 
+In order to find the conditions where the system M3 is stable, we need to linearize the mode,
+
+The authors sssume the alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure 
 
 $\begin{equation} \dot V_A = \begin{cases} GP_s^*-I \mbox{ if } P_s^*\gt I/G \\ 0 \mbox{ if } P_s^*\lt I/G \end{cases}  \tag{18} \end{equation}$ 
 
-$P_s^* = P_s(t-t_d)$ is the CO2 partial pressure, $t_d$ is the systemic arterial delay.
+G is the controller gain, $I$ is the linear intercept. $P_s^* = P_s(t-t_d)$ is the CO2 partial pressure, $t_d$ is the systemic arterial delay.
 
-plug (18) into (17)
+plug (18) into (17):
 
-$\frac{\dd P_s}{\dd t} = F(P_s^*, P_s)+M_sV_s/k; F(P_s^*,P_s)=(GP_s^*-I)(P_I-P_s)V_s/\lambda$ 
+$\begin{equation} \frac{\dd P_s}{\dd t} = F(P_s^*, P_s)+M_sV_s/k \tag{19} \end{equation} $
 
-Let RHS equal zero and solve the equation to get the fixed point:
+$F(P_s^*,P_s)=(GP_s^*-I)(P_I-P_s)V_s/\lambda$  
+
+Let RHS equals zero and solve the equation to get the fixed point:
+
+$P_{so} = \frac{P_I+I/G \pm \sqrt{\Delta}}{2}$ （19-1）
+
+The authors want to linearize the model near the fixed point. So they have:
+
+$\begin{equation} \frac{\dd P_s}{\dd t} = A_sP_s+B_sP^*_s \\ \tag{22} \end{equation}$ 
 
 $A_s = -\frac{\dot V_{Ao}^*V_s}{\lambda}; B_s = -\frac{GV_s(P_{so}-P_I)}{\lambda}$
 
-$\begin{equation} \frac{\dd P_s}{\dd t} = A_sP_s+B_sP^*_s \tag{22} \end{equation}$ 
+ In order to find the condition where (22) is stable, the authors use "Hayes" condition
+
+If the following three conditions are satisfied, (22) is stable.
+
+S.1 $A_st_d<1$
+
+S.2 $A_s<-B_s$
+
+S.3 $-B_st_d<\sqrt{(A_st_d)^2 + \rho_1^2}$;   $\rho_1$ is the root of $\rho\cot \rho = A_st_d$ 
+
+The authors define a stability index to characterize the stability.
+
+$\begin{equation} SI=\frac{2Gt_d(P_{so}-P_I)}{\pi \lambda V_s} = \frac{UF}{SF}\lt 1  \tag{23} \end{equation}$  
+
+If $SI\lt 1$ or $UF \lt SF$, $P_s,\dot V_A$ is stable.
+
+Below is the graph of the SI with respect to parameters:
+
+<img src="CO2 control of the respiratory system plant dynamics and stability analysis.assets/image-20220417100208306.png" alt="image-20220417100208306" style="zoom:50%;" />
+
+We can see from the graph, that inspired CO2 partial pressure $P_I$, metabolic rate $M_s$, do not affect the stability of the system that much. time delay $t_d$, controller gain $G$, effective tissue volume $V_s$ is closely related to stability of the system. If the the systemic arterial delay time is large, the fixed point is not stable. When inspired CO2 or the effective tissue volume increase, the system is more stable
+
+
+
+### Limitation
+
+The author make a lot of biological assumptions:
+
+A1: Suppose within each compartment, CO2 is in chemical equilibrium
+
+A2: Consider only the stable partial pressure of the gas
+
+A3:  Consider a small amount of time(t is small)
+
+A4: use time delay data measured from human adults.
+
+A5: Assume that the time delays within the plant are negligible with respect to other system time constant
+
+A6: alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure
+
+The authors(1988) say in the paper: "Exhaustive simulations of different combinations of all parameters would be a formidable task". But now more numerical simulation is possible.
+
+equation (9,16,17,22) was not validated and (16,17) do not include the effect of inspired CO2 concentration.
 
 
 
