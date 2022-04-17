@@ -70,6 +70,16 @@ $\begin{equation} P_{tis} = P_v=(Q_{ot}P_{ot}+Q_mP_m)/Q \tag 7 \end{equation}$
 
 Assumption####: consider stable, long term effect; 
 
+set (2) RHS=0:
+
+$\frac {M_m} {k} + Q_m(P_a^*-P_m) =0$
+
+$Q_mP_m = \frac {M_m} {k} + Q_mP_a^*$ 
+
+similarly: $Q_{ot}P_{ot} = \frac {M_{ot}} {k} + Q_{ot}P_a^*$ 
+
+plug into (5) :
+
 $\begin{equation} M_{tis} = M_m + M_{ot} \tag 8 \end{equation}$ 
 
 ##### In order to find an expression of $V_{tis}$:
@@ -145,6 +155,8 @@ $\begin{equation} \frac{\dd P_{tis}}{\dd t} = \frac{\dot V_A V_S(P_I-P_{tis})}{\
 
 
 #### M3:
+
+now we only have one compartment, change name to s.
 
 $\begin{equation} \frac{\dd P_{s}}{\dd t} = \frac{\dot V_A V_S(P_I-P_{s})}{\lambda} + \frac{M_{s}V_S}{k} \tag{17} \end{equation}$ 
 
