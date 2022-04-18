@@ -2,13 +2,15 @@
 
 Short-term Periodicities(STP) are cyclic changes in ventilation and composition of respiratory gases having periods ranging from 20 to 120 seconds.
 
-The authors are trying to investigate the hypothesis that the stability characteristics associated with CO2 control of the respiratory system determine STP. The former study did not use both analytical and simulation techniques.
+The authors are trying to investigate the hypothesis that the stability characteristics associated with CO2 control of the respiratory system determine STP. The former studies lack neither analytical or simulation techniques.
+
+The paper is organized in two parts. The first part is modeling the CO2 dynamics. The authors use a three compartment model first, then adding several assumptions and plugging in the real data to reduce the model to two compartments and final to one compartment. The second part is the stability analysis part. The author linearize the one compartment model, and derived an explicit criterion which maps the parameters into a unified index of ventilatory stability.
 
 ### Model CO2 plant dynamics:
 
 #### Three compartment model
 
-The author suppose we have three compartment to consider: A: alveolar; m: muscle; ot: other tissue. Suppose within each compartment, CO2 is in chemical equilibrium.
+The authors suppose we have three compartment to consider: A: alveolar; m: muscle; ot: other tissue. Suppose within each compartment, CO2 is in chemical equilibrium.
 
 $P_A$ is the CO2 partial pressures of the alveolar gas. $P_a$ is the CO2 partial pressures of the arterial blood. In balance state, $P_A=P_a$
 
@@ -182,9 +184,9 @@ The y axis of M1, M2, M3 correspond to $P_v,P_v,P_s$ in each model.
 
 <img src="CO2 control of the respiratory system plant dynamics and stability analysis.assets/image-20220416181946756.png" alt="image-20220416181946756" style="zoom:50%;" />
 
-#### Stability criterion:
+### Stability criterion:
 
-In order to find the conditions where the system M3 is stable, we need to linearize the mode,
+In order to find the conditions where the system M3 is stable, we need to linearize the model,
 
 The authors sssume the alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure 
 
@@ -234,7 +236,7 @@ We can see from the graph, that inspired CO2 partial pressure $P_I$, metabolic r
 
 ### Limitation
 
-The author make a lot of biological assumptions:
+The authors make a lot of biological assumptions:
 
 A1: Suppose within each compartment, CO2 is in chemical equilibrium
 
