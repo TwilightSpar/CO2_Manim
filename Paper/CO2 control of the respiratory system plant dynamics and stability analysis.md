@@ -4,13 +4,13 @@ Short-term Periodicities(STP) are cyclic changes in ventilation and composition 
 
 The authors are trying to investigate the hypothesis that the stability characteristics associated with CO2 control of the respiratory system determine STP. The former studies lack neither analytical or simulation techniques.
 
-The paper is organized in two parts. The first part is modeling the CO2 dynamics. The authors use a three compartment model first, then adding several assumptions and plugging in the real data to reduce the model to two compartments and final to one compartment. The second part is the stability analysis part. The author linearize the one compartment model, and derived an explicit criterion which maps the parameters into a unified index of ventilatory stability.
+The paper is organized in two parts. The first part is modeling the CO2 dynamics. The authors use a three compartment model first, then adding several assumptions and plugging in the real data to reduce the model to two compartments and final to one compartment. The second part is the stability analysis part. The authors linearize the one compartment model, and derived an explicit criterion which maps the parameters into a unified index of ventilatory stability.
 
 ### Model CO2 plant dynamics:
 
 #### Three compartment model
 
-The authors suppose we have three compartment to consider: A: alveolar; m: muscle; ot: other tissue. Suppose within each compartment, CO2 is in chemical equilibrium.
+The authors suppose we have three compartments to consider: A: alveolar; m: muscle; ot: other tissue. Suppose within each compartment, CO2 is in chemical equilibrium.
 
 $P_A$ is the CO2 partial pressures of the alveolar gas. $P_a$ is the CO2 partial pressures of the arterial blood. In balance state, $P_A=P_a$
 
@@ -20,7 +20,7 @@ $V_A \derivative{P_A}{t}=\dot V_A(P_I-P_A)+\lambda Q(P_v^*-P_a)$
 
 $P_I$ is the inspired CO2 partial pressure; $P_v^*(t)=P_v(t-t_v)$ is the mixed venous partial pressure with systemic venous delay time $t_v$. $V_A$ is an equivalent volume for alveolar gas and tissue. $\dot V_A$ is the alveolar ventilation. $Q$ is the pulmonary blood flow(equal cardiac output). $\lambda$ is the CO2 tissue-gas partition coefficient.
 
-Below is the CO2 flows in three compartment:
+Below is the CO2 flows in three compartments:
 
 <img src="CO2 control of the respiratory system plant dynamics and stability analysis.assets/image-20220415110035624.png" alt="image-20220415110035624" style="zoom:67%;" />
 
@@ -34,9 +34,9 @@ $V_m$ is the muscle volume. $M_m$ is the metabolic rate. $Q_m$ is the muscle blo
 
 $V_{ot} \derivative{P_{ot}}{t} = \frac {M_{ot}} {k} + Q_{ot}(P_a^*-P_{ot})$
 
-$V_{ot}$ is the other tissue volume. $M_{ot}$ is the metabolic rate. $Q_{ot}$ is the other tissue blood flow. $P_a^*(t)=P_a(t-t_a)$ where $t_a$ is the systemic arterial delay time. $k$ is the slope of the CO2 equilibrium relation between total and free CO2 in blood, muscle and other tissue. $P_{ot}$ is the CO2 partial pressure in other tissue.
+$V_{ot}$ is the other tissue volume. $M_{ot}$ is the metabolic rate. $Q_{ot}$ is the other tissue blood flow. $P_a^*(t)=P_a(t-t_a)$ where $t_a$ is the systemic arterial delay time. $k$ is the slope of the CO2 equilibrium relation between total and free CO2 in blood, muscle and other tissue. $P_{ot}$ is the CO2 partial pressure in other tissues.
 
-In addition, total blood flow should equal to the sum of parallel compartment output.
+In addition, total blood flow should equal the sum of parallel compartment output.
 
 $Q = Q_m+Q_{ot}$
 
@@ -68,7 +68,7 @@ The authors want to simplify the model M1 by merging two tissues compartment, an
 
 $\begin{equation} V_{tis} \derivative{P_{tis}}{t} = \frac {M_{tis}} {k} + Q(P_a^*-P_{tis}) \tag 6 \end{equation}$ 
 
-In this equation we need to find expression for $V_{tis}$ and $M_{tis}$.
+In this equation we need to find expressions for $V_{tis}$ and $M_{tis}$.
 
 ##### Find $M_{tis}$:
 
@@ -188,7 +188,7 @@ The y axis of M1, M2, M3 correspond to $P_v,P_v,P_s$ in each model.
 
 In order to find the conditions where the system M3 is stable, we need to linearize the model,
 
-The authors sssume the alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure 
+The authors assume the alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure 
 
 $\begin{equation} \dot V_A = \begin{cases} GP_s^*-I \mbox{ if } P_s^*\gt I/G \\ 0 \mbox{ if } P_s^*\lt I/G \end{cases}  \tag{18} \end{equation}$ 
 
@@ -230,7 +230,7 @@ Below is the graph of the SI with respect to parameters:
 
 <img src="CO2 control of the respiratory system plant dynamics and stability analysis.assets/image-20220417100208306.png" alt="image-20220417100208306" style="zoom:50%;" />
 
-We can see from the graph, that inspired CO2 partial pressure $P_I$, metabolic rate $M_s$, do not affect the stability of the system that much. time delay $t_d$, controller gain $G$, effective tissue volume $V_s$ is closely related to stability of the system. If the the systemic arterial delay time is large, the fixed point is not stable. When inspired CO2 or the effective tissue volume increase, the system is more stable
+We can see from the graph that inspired CO2 partial pressure $P_I$, metabolic rate $M_s$, do not affect the stability of the system that much. time delay $t_d$, controller gain $G$, effective tissue volume $V_s$ is closely related to stability of the system. If the systemic arterial delay time is large, the fixed point is not stable. When inspired CO2 or the effective tissue volume increase, the system is more stable
 
 
 
@@ -250,9 +250,11 @@ A5: Assume that the time delays within the plant are negligible with respect to 
 
 A6: alveolar ventilation $\dot V_A$ is linearly related to CO2 partial pressure
 
-The authors(1988) say in the paper: "Exhaustive simulations of different combinations of all parameters would be a formidable task". But now more numerical simulation is possible.
+The authors(1988) said in the paper: "Exhaustive simulations of different combinations of all parameters would be a formidable task". But now more numerical simulation is possible.
 
 equation (9,16,17,22) was not validated and (16,17) do not include the effect of inspired CO2 concentration.
+
+In the stability analysis part, the authors tried to linearize the model around the fixed point. But, they did not consider the situation that fixed point $P_{so}$ is a hyperbolic(in 1D meaning). If that is the case, Hartman-Grobman can not apply.
 
 
 

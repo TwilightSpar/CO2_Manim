@@ -7,13 +7,13 @@
 展示公式（3），ReplacementTransform变换，得到$\bar P_{ot}(s) = \frac{M_{ot}/(ks) + Q_{ot}\bar P_a^*}{sV_{ot}+Q_{ot}}$
 7-L+变换后的（2）（3）得到（10）
 
-3，得到M2
+3，得到M2		##### wzg
 展示（10），展示假设，TransformMatchingTex变换，ReplacementTransform变换得到（11），ReplacementTransform变换得到（12）
 
-4，展示M2
+4，展示M2		##### done wg
 展示（7，8，12）变换到（14），上面再加上13，下面加上两个\tau的定义
 
-5，reduce to one compartment
+5，reduce to one compartment		###### done wg
 展示（13，14），上面展示假设，13，14 Transform变换得到（15）
 展示（15） 的Left hand side， 带入theta，展示变换后的LHS， 变换，变换
 带入假设>>1,<<，展示tau_e, tau_A, 变换得到（16）。最后只显示16
