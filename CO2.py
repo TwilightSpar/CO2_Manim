@@ -56,6 +56,16 @@ class M1(Scene):
         self.play(TransformMatchingTex(Eq2_3_group, M1_Tis_1))
         self.wait()
 
+        rectangle_M = Rectangle(fill_opacity=0.0, stroke_color=ORANGE, width=1.3, height=0.6)
+        rectangle_V = Rectangle(fill_opacity=0.0, stroke_color=ORANGE, width=1.3, height=0.6)
+        rectangle_M.move_to(M1_Tis_1.get_center()).move_to((-3, 1.3, 0))
+        rectangle_V.move_to(M1_Tis_1.get_center()).move_to((-5.7, 1, 0))
+        self.play(FadeIn(rectangle_M))
+        self.play(FadeIn(rectangle_V))
+        self.wait()
+        self.play(FadeOut(rectangle_M))
+        self.play(FadeOut(rectangle_V))
+
         Assumption_2 = MathTex(r"\mbox{let RHS=0, consider stable situation}").next_to(M1_Tis_1, UP)
         self.play(Write(Assumption_2))
         self.wait(2)
