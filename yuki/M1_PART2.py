@@ -141,5 +141,5 @@ class M1_PART2(Scene):
         self.play(TransformMatchingTex(M1_formula_10_1, M1_formula_12))
         self.wait()
 
-#manim M1_show.py M1 -pqm
-#manim M1_show.py M1_PART2 -pqm
+#manim M1_PART2.py M1 -pqm
+#manim M1_PART2.py M1_PART2 -pqm

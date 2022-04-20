@@ -1,7 +1,7 @@
 from manim import *
 
 
-class M1(Scene):
+class M1_part1(Scene):
     def construct(self):
         M1_formula_1 = MathTex(r"V_A \derivative{P_A}{t}=\dot V_A(P_I-P_A)+\lambda Q(P_v^*-P_a) \tag{1}").shift(UP * 3)
         M1_formula_2 = MathTex(r"V_m \derivative{P_m}{t} = \frac {M_m} {k} + Q_m(P_a^*-P_m)  \tag{2} ").shift(UP * 1.5)

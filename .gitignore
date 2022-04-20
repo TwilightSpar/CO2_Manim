@@ -1,1 +1,5 @@
 media/
+__pycache__/
+wg/__pycache__/
+yuki/__pycache__/
+.idea/

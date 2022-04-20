@@ -10,9 +10,9 @@ class M2(Scene):
         Assumption_3 = MathTex(r"\mbox{Consider a small amount of time(t is small), s is large}").scale(0.3).next_to(Assumption_2, DOWN)
         self.add(Assumption_1, Assumption_2, Assumption_3)
 
-        M2_formula_7 = MathTex(r"P_{tis} = P_v=(Q_{ot}P_{ot}+Q_mP_m)/Q \tag{7}").shift(UP * 2)
+        M2_formula_6 = MathTex(r"V_{tis} \derivative{P_{tis}}{t} = \frac {M_{tis}} {k} + Q(P_a^*-P_{tis}) \tag 6").shift(UP * 2)
         M2_formula_8 = MathTex(r"M_{tis} = M_m + M_{ot} \tag{8} ")
-        M2_formula_8.next_to(M2_formula_7, DOWN)
+        M2_formula_8.next_to(M2_formula_6, DOWN)
         M2_formula_12 = MathTex(r"V_{tis} = Q^2/ (\frac{Q_{ot}^2}{V_{ot}}+\frac{Q_{m}^2}{V_{m}}) \tag{12}")
         M2_formula_12.next_to(M2_formula_8, DOWN)
 
@@ -24,7 +24,7 @@ class M2(Scene):
         M2_def_tau.next_to(M2_formula_14, DOWN)
         # M1_Tis_1.to_edge(UP)
 
-        self.play(Write(M2_formula_7))
+        self.play(Write(M2_formula_6))
         self.wait()
 
         self.play(Write(M2_formula_8))
@@ -34,7 +34,7 @@ class M2(Scene):
         self.wait()
 
         #formula 7, 8, 12
-        FGroup1 = VGroup(M2_formula_7, M2_formula_8, M2_formula_12)
+        FGroup1 = VGroup(M2_formula_6, M2_formula_8, M2_formula_12)
 
         self.play(TransformMatchingTex(FGroup1, M2_formula_14))
         self.wait()

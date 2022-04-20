@@ -86,7 +86,7 @@ class M3(Scene):
         self.wait()
 
         # Hayes stability analysis
-        formula_22 = MathTex(r"Q\frac{\dd P_s}{\dd t}", r" = ", r"A_sP_s+B_sP^*_s")
+        formula_22 = MathTex(r"\frac{\dd P_s}{\dd t}", r" = ", r"A_sP_s+B_sP^*_s")
         formula_23 = MathTex(r"SI", r"=", r"\frac{2Gt_d(P_{so}-P_I)}{\pi \lambda V_s} = \frac{UF}{SF} < 1")
         Hayes_condition = MathTex(r"\mbox{by Hayes condition:}").to_edge(UP)
         s_1 = MathTex(r"\mbox{S.1: } A_st_d<1")
