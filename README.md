@@ -7,7 +7,7 @@ by Ahmed ElHefnawy, Gerald M. Saidel, Eugen N. Bruce
 [Recorded presention](https://youtu.be/kB1zh1AncHQ)
 
 ## Manim method learned:
-- ``MathTex: Add `LaTex` equation object. Can break one equation to a list of `Tex` objects.
+- `MathTex`: Add `LaTex` equation object. Can break one equation to a list of `Tex` objects.
 - `VGroup`: Group some object for future transformation.
 - `TransformMatchingTex`: transform From 'MathText' objects A to B, if A,B are list of objects and some of them are the same, this method will generate a smooth transformation.
 - `Write`, `add`, `remove`, `Unwrite`, `shift`, `scale`: useful animation command
