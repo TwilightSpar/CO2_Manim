@@ -4,15 +4,14 @@ This is a Manim animation making project for my presentation for **"Mathematic B
 The paper I present is *"CO2 control of the respiratory system: plant dynamics and stability analysis"* <br/>
 by Ahmed ElHefnawy, Gerald M. Saidel, Eugen N. Bruce
 
+Here is the [Recorded presention](https://youtu.be/kB1zh1AncHQ).
 Manim is a powerful tool for visualizing Math related video. Here an example: <br/>
 
 
 
-https://user-images.githubusercontent.com/33364035/164806762-d94f85c6-0967-45be-af2d-aa0b9e1a84c9.mp4
+![] (https://user-images.githubusercontent.com/33364035/164806762-d94f85c6-0967-45be-af2d-aa0b9e1a84c9.mp4 | width=300)
 
 
-
-Here is the [Recorded presention](https://youtu.be/kB1zh1AncHQ).
 
 ## Manim method learned:
 - `MathTex`: Add `LaTex` equation object. Can break one equation to a list of `Tex` objects.
