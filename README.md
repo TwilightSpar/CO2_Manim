@@ -6,7 +6,7 @@ by Ahmed ElHefnawy, Gerald M. Saidel, Eugen N. Bruce
 
 Manim is a powerful tool for visualizing Math related video. Here an example: <br/>
 
-Example/M1_1.mp4
+M1_1.mp4
 
 Here is the [Recorded presention](https://youtu.be/kB1zh1AncHQ).
 
