@@ -9,7 +9,7 @@ Manim is a powerful tool for visualizing Math related video. Here an example: <b
 
 
 
-![] (https://user-images.githubusercontent.com/33364035/164806762-d94f85c6-0967-45be-af2d-aa0b9e1a84c9.mp4 | width=300)
+https://user-images.githubusercontent.com/33364035/164806762-d94f85c6-0967-45be-af2d-aa0b9e1a84c9.mp4 | width=300
 
 
 
