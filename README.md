@@ -1,8 +1,9 @@
 # CO2_Manim
 CO2_Manim
 
-This is a Manim animation making project for my presentation for "Mathematic Biology" course. 
-The paper I present is "CO2 control of the respiratory system: plant dynamics and stability analysis" by Ahmed ElHefnawy, Gerald M. Saidel, Eugen N. Bruce
+This is a Manim animation making project for my presentation for "Mathematic Biology" course. <br/>
+The paper I present is "CO2 control of the respiratory system: plant dynamics and stability analysis" <br/>
+by Ahmed ElHefnawy, Gerald M. Saidel, Eugen N. Bruce
 
 [Recorded presention](https://youtu.be/kB1zh1AncHQ)
 
