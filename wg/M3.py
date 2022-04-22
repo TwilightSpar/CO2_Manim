@@ -13,7 +13,9 @@ class M3(Scene):
 
         self.add(Assumption_1, Assumption_2, Assumption_3, Assumption_4, Assumption_5)
 
-
+        M2_formula_16 = MathTex(
+            r"\frac{\dd P_{tis}}{\dd t} = \frac{\dot V_A V_S(P_I-P_{tis})}{\lambda} + \frac{M_{tis}V_S}{k} \tag{16}")
+        self.add(M2_formula_16)
         Change_to_s = MathTex(r"\mbox{Only have one compartment, change subscript to s}").to_edge(UP)
         self.play(Write(Change_to_s))
         self.wait()
@@ -28,7 +30,7 @@ class M3(Scene):
 
         M3_def_A_B = MathTex(r"A_s = -\frac{\dot V_{Ao}^*V_s}{\lambda}; B_s = -\frac{GV_s(P_{so}-P_I)}{\lambda}").next_to(M3_formula_22, DOWN)
 
-        self.play(Write(M3_formula_17))
+        self.play(TransformMatchingTex(M2_formula_16, M3_formula_17))
         self.wait()
 
         Assumption_6 = MathTex(
